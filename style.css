@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    /*CENTRALIZAR NA VERTICAL*/
+    background-color: #0a0a10;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    /*DEIXAR TODOS EM COLUNAS*/
+    padding: 15px 0px;
+    max-width: 414px;
+    min-height: 100vh;
+    gap: 12px;
+    /*DISTANCIAMENTO*/
+    position: relative;
+    /*HABILITAR RECURSO DE 3D*/
+}
+
+.blur {
+    width: 414px;
+    height: 280px;
+    background: #fff;
+    position: absolute;
+    z-index: -1;
+    /*EFEITO 3D*/
+    opacity: 0.25;
+    filter: blur(24px);
+    /*EFEITO POR TRAS DA IMAGEM*/
+
+}
+
+h1 {
+    font-weight: 700;
+    /*PESO DA FONTE*/
+    font-size: 28px;
+    /*TAMANHO DA FONTE*/
+    line-height: 33px;
+    text-align: center;
+    /*ALINHAR O NO CENTRO*/
+    color: #ffff;
+    /*COR DA FONTE*/
+}
+
+.conteiner-input {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    color: #fff;
+}
