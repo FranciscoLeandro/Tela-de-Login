@@ -7,52 +7,45 @@
 
 body {
     display: flex;
-    justify-content: center;
-    /*CENTRALIZAR NA VERTICAL*/
+    justify-content: center; /*CENTRALIZAR NA VERTICAL*/
     background-color: #0a0a10;
 }
 
 main {
     display: flex;
-    flex-direction: column;
-    /*DEIXAR TODOS EM COLUNAS*/
+    flex-direction: column; /*DEIXAR TODOS EM COLUNAS*/
+    align-items: center;
     padding: 15px 0px;
     max-width: 414px;
     min-height: 100vh;
-    gap: 12px;
-    /*DISTANCIAMENTO*/
-    position: relative;
-    /*HABILITAR RECURSO DE 3D*/
+    gap: 12px; /*DISTANCIAMENTO*/
+    position: relative; /*HABILITAR RECURSO DE 3D*/
 }
 
+/*SOMBREAMENTO POR TRAS DA IMG*/
 .blur {
     width: 414px;
     height: 280px;
     background: #fff;
     position: absolute;
-    z-index: -1;
-    /*EFEITO 3D*/
+    z-index: -1; /*EFEITO 3D*/
     opacity: 0.25;
-    filter: blur(24px);
-    /*EFEITO POR TRAS DA IMAGEM*/
-
+    filter: blur(24px); /*EFEITO POR TRAS DA IMAGEM*/
 }
 
 h1 {
-    font-weight: 700;
-    /*PESO DA FONTE*/
-    font-size: 28px;
-    /*TAMANHO DA FONTE*/
+    font-weight: 700; /*PESO DA FONTE*/
+    font-size: 28px; /*TAMANHO DA FONTE*/
     line-height: 33px;
-    text-align: center;
-    /*ALINHAR O NO CENTRO*/
-    color: #ffff;
-    /*COR DA FONTE*/
+    text-align: center; /*ALINHAR O NO CENTRO*/
+    color: #ffff; /*COR DA FONTE*/
 }
 
 .conteiner-input {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
 }
 
 label {
@@ -60,5 +53,129 @@ label {
     font-size: 13px;
     line-height: 22px;
     letter-spacing: -0.408px;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+input {
+    width: 100%; /*LARGURA*/
+    height: 42px; /*ALTURA*/
+    margin-bottom: 8px; /*DISTANCIAMENTO ENTRE INPUT*/
+    background: transparent; /*FICAR TRANSPARENTE DENTRO DO INPUT*/
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.6); /*BORDA SOMENTE EM BAIXO*/
+
+    /*TEXTO DENTRO DO INPUT*/
+    font-weight: 400; /*PESO*/
+    font-size: 17px; /*TAMANHO*/
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: #fff;
+}
+
+/*CASO QUEIRA PERSONALIZAR O PLACEHOLDER*/
+input::placeholder {
+    font-weight: 400; /*PESO DA FONTAS*/
+    font-size: 17px; /*TAMANHO*/
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: #fff;
+}
+
+.btn-login {
+    width: 100%;
+    height: 68px;
+    background-color: red;
+    border: none;
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 2px;
+    color: #fff;
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0, 03 ease;
+}
+
+.btn-login:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.btn-login:active {
+    opacity: 0.6;
+}
+
+i {
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 2px;
+}
+
+.btn-google {
+
+    width: 100%;
+    height: 68px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+
+    background-color: rgba(255, 255, 255, 0.14);
+    font-weight: 900;
+    line-height: 2px;
+    color: #fff;
+    gap: 12px;
+    /*DISTANCIA DA IMG DO TESTO*/
+}
+
+.btn-google:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.btn-google:active {
+    opacity: 0.6;
+}
+
+.conteiner-link {
+    margin-top: 20px;
+    position: relative;
+}
+
+a {
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgb(255, 255, 255, 0.6);
+    text-decoration: none; /*TIRAR O SUBLINHADO*/
+}
+
+a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background-color: red;
+    bottom: -3px;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+a:hover::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: red;
+    bottom: -3px;
+    left: 0;
+}
+
+span {
     color: #fff;
 }
